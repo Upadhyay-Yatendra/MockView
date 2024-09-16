@@ -1,6 +1,6 @@
 import React from "react";
-// import AddNewInterview from "./_components/AddNewInterview";
-// import InterviewList from "./_components/InterviewList";
+import AddNewInterview from "./_component/AddNewInterview";
+import InterviewList from "./_component/InterviewList.jsx";
 
 const Dashboard = () => {
   return (
@@ -8,10 +8,10 @@ const Dashboard = () => {
       <h2 className="font-bold text-2xl">dashboard</h2>
       <h2 className="text-gray-500">Create and Start Your AI Mockup Interview</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 my-5">
-        {/* <AddNewInterview/> */}
+        <AddNewInterview/>
       </div>
       {/* previous interview questions */}
-      {/* <InterviewList/> */}
+      <InterviewList/>
     </div>
   );
 };
