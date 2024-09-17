@@ -40,7 +40,7 @@ function AddNewInterview() {
   }`;
 
     try {
-      const result = await chatSession.sendMessage(inputPrompt);
+      const result = await chatSession.sendMessage(inputPrompt); 
       const responseText = await result.response.text();
       console.log("🚀 ~ file: AddNewInterview.jsx:41 ~ onSubmit ~ responseText:", responseText)
       const jsonMatch = responseText.match(/\[.*?\]/s);

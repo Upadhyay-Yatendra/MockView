@@ -1,0 +1,17 @@
+[33mcommit 0aa47c698e00b05551958ce15855c902518caef7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: UPADHYAY-YATENDRA <yupadhyayyk@gmail.com>
+Date:   Mon Sep 16 14:48:04 2024 +0530
+
+    Added Pages for Interview and conencted the Gemini API
+
+[33mcommit 583dea0d722ae274bee2ec8769d8985ba983a33f[m
+Author: UPADHYAY-YATENDRA <yupadhyayyk@gmail.com>
+Date:   Sun Sep 15 13:47:23 2024 +0530
+
+    first commit WITH BASIC CODE SETUP AND DASHBOARD SETUP
+
+[33mcommit a54315ed899a22557f28164035d2731d453eaca0[m
+Author: UPADHYAY-YATENDRA <yupadhyayyk@gmail.com>
+Date:   Sat Sep 14 20:04:16 2024 +0530
+
+    Initial commit from Create Next App
