@@ -33,14 +33,14 @@ function AddNewInterview() {
     e.preventDefault();
     setLoading(true);
 
-    const inputPrompt = `Job position: ${jobPosition}, Job Description: ${jobDescription}, Years of Experience: ${jobExperience}, Depending on Job Position, Job Description and Years of Experience give us ${process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT} most expected and improtant Interview question along with Answer in JSON format, Give us question and Answer field on JSON,Each question and answer should be in the format:
+    const inputPrompt = `Job position: ${jobPosition}, Job Description: ${jobDescription}, Years of Experience: ${jobExperience}, Depends on Job Position, Job Description and Years of Experience give us ${process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT} Interview question along with Answer in JSON format, Give us question and Answer field on JSON,Each question and answer should be in the format:
   {
     "question": "Your question here",
     "answer": "Your answer here"
   }`;
 
     try {
-      const result = await chatSession.sendMessage(inputPrompt); 
+      const result = await chatSession.sendMessage(inputPrompt);
       const responseText = await result.response.text();
       console.log("🚀 ~ file: AddNewInterview.jsx:41 ~ onSubmit ~ responseText:", responseText)
       const jsonMatch = responseText.match(/\[.*?\]/s);
@@ -81,7 +81,7 @@ function AddNewInterview() {
   return (
     <div>
       <div
-        className="p-10 border rounded-lg bg-secondary hover:scale-105 hover:shadow-md cursor-pointer transition-all"
+        className="p-10 border rounded-lg  hover:scale-105 hover:shadow-md cursor-pointer transition-all"
         onClick={() => setOpenDialog(true)}
       >
         <h1 className="font-bold text-lg text-center">+ Add New</h1>
@@ -90,7 +90,7 @@ function AddNewInterview() {
         <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="font-bold text-2xl">
-              Tell us more about your job Interview
+              Tell us more about your job Interviewing
             </DialogTitle>
           </DialogHeader>
           <DialogDescription>
@@ -122,7 +122,7 @@ function AddNewInterview() {
                     placeholder="Ex. 5"
                     type="number"
                     min="1"
-                    max="40"
+                    max="70"
                     required
                     onChange={(e) => setJobExperience(e.target.value)}
                   />
