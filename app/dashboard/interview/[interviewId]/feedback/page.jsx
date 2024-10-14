@@ -1,5 +1,6 @@
 "use client";
 import { db } from "@/utils/db";
+import axios from "axios";
 import { UserAnswer } from "@/utils/schema";
 import { eq } from "drizzle-orm";
 import React, { useEffect, useState } from "react";
@@ -27,6 +28,17 @@ const Feedback = ({ params }) => {
     console.log("🚀 ~ file: page.jsx:11 ~ GetFeedback ~ result:", result);
     setFeedbackList(result);
   };
+
+const handleGetTestReport = () => {
+  // Call your backend API to send the test report to the user's email
+  // Replace with your actual API endpoint
+  axios.post("http://localhost:4566/interview/send-test-report", {
+    interviewId: params.interviewId,
+    email: params.email, // assuming you have the user's email in the params
+  });
+};
+  
+
   return (
     <div className="p-10">
       <h2 className="text-3xl font-bold text-green-600">Congratulations!</h2>
@@ -38,7 +50,7 @@ const Feedback = ({ params }) => {
       ) : (
         <>
           <h2 className="text-primary text-lg my-2">
-            Your overall interview rating : 
+            Your overall interview rating :
             <strong>
               {feedbackList.length > 0
                 ? (
@@ -83,11 +95,20 @@ const Feedback = ({ params }) => {
               </Collapsible>
             ))}
         </>
-      )}
-      <Button className="mt-5" onClick={() => router.replace("/dashboard")}>
-        {" "}
-        Go Home
-      </Button>
+      )}<div className="flex gap-4 mt-5">
+  <Button
+    className="hover:bg-green-600 hover:text-white transition duration-300"
+    onClick={() => router.replace("/dashboard")}
+  >
+    Go Home
+  </Button>
+  <Button
+    className="hover:bg-blue-600 hover:text-white transition duration-300"
+    onClick={handleGetTestReport}
+  >
+    Get test report on email
+  </Button>
+</div>
     </div>
   );
 };
