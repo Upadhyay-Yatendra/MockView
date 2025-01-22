@@ -32,6 +32,15 @@ const RecordAnswerSection = ({
     continuous: true,
     useLegacyResults: false,
   });
+  // for dark mode
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
   useEffect(() => {
     results.map((result) =>
       setUserAnswer((prevAns) => prevAns + result?.transcript)
@@ -111,18 +120,18 @@ const RecordAnswerSection = ({
   return (
     <div className="flex justify-center items-center flex-col border rounded-lg my-10">
       <div className="flex flex-col my-20 justify-center items-center bg-black rounded-lg p-5">
-        <Image
+        {/* <Image
           src={"/webcam.png"}
           width={200}
           height={200}
           className="absolute"
           alt="webcam"
           priority
-        />
-        {/* <Webcam
+        /> */}
+        <Webcam
           style={{ height: 300, width: "100%", zIndex: 10 }}
           mirrored={true}
-        /> */}
+        />
       </div>
       <Button
         disabled={loading}
@@ -135,7 +144,7 @@ const RecordAnswerSection = ({
             <StopCircle /> Stop Recording...
           </h2>
         ) : (
-          <h2 className="text-primary flex gap-2 items-center">
+          <h2 className="text-black dark:text-white flex gap-2 items-center">
             <Mic /> Record Answer
           </h2>
         )}
