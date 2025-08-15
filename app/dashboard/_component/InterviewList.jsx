@@ -12,7 +12,7 @@ const InterviewList = () => {
 
   useEffect(() => {
     if (user) {
-      console.log("NODE_SERVER_URI:", process.env.NEXT_PUBLIC_NODE_SERVER_URI);
+      
       axios
         .get(process.env.NEXT_PUBLIC_NODE_SERVER_URI + "/interview/taken", {
           params: {
@@ -24,7 +24,7 @@ const InterviewList = () => {
           },
         })
         .then((response) => {
-          console.log("Response received ->", response.data);
+          // console.log("Response received ->", response.data);
           setInterviewList(response.data.interviews || []); // update interview list
           setTotalPages(response.data.totalPages || 0); // update totalPages
         })

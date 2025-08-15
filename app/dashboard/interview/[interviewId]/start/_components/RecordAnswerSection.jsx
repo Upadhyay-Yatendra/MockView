@@ -67,7 +67,7 @@ const RecordAnswerSection = ({
   };
 
   const UpdateUserAnswer = async () => {
-    console.log(userAnswer, "########");
+    // console.log(userAnswer, "########");
     setLoading(true);
     const feedbackPrompt =
       "Question:" +
