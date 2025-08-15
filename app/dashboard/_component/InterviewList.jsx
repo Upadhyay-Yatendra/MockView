@@ -13,7 +13,7 @@ const InterviewList = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get("http://localhost:4566/interview/taken", {
+        .get(process.env.NODE_SERVER_URI + "/interview/taken", {
           params: {
             email: user?.primaryEmailAddress?.emailAddress,
             page: pageNumber, // pass page number as a query param
@@ -39,7 +39,7 @@ const InterviewList = () => {
 
   return (
     <div>
-      <h2 className="font-medium text-xl">Previous Mock Interviews</h2>
+      <h2 className="font-medium text-xl">Previous Interviews</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-3">
         {interviewList.length > 0 ? (
           interviewList.map((interview, index) => (

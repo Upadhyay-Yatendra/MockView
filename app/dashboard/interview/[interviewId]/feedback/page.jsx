@@ -32,7 +32,7 @@ const Feedback = ({ params }) => {
 const handleGetTestReport = () => {
   // Call your backend API to send the test report to the user's email
   // Replace with your actual API endpoint
-  axios.post("http://localhost:4566/interview/send-test-report", {
+  axios.post(process.env.NODE_SERVER_URI + "/interview/send-test-report", {
     interviewId: params.interviewId,
     email: params.email, // assuming you have the user's email in the params
   });
