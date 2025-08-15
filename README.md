@@ -1,6 +1,6 @@
-# AI Mock Test Application 🚀
+# MockView 🚀
 
-**MockView** is a cutting-edge platform designed to help users prepare for interviews and assessments through AI-powered mock tests. With features like AI feedback, report generation, and efficient test management, MockView ensures a seamless experience while leveraging modern technology for scalability and performance.
+**MockView** is a platform designed to help users prepare for interviews and assessments through AI-powered mock tests. With features like AI feedback, report generation, and efficient test management, MockView ensures a seamless experience while leveraging modern technology for scalability and performance.
 
 ---
 
@@ -49,8 +49,11 @@
 
 ### Steps to Run
 1. Clone the repository:
-   git clone https://github.com/Upadhyay-Yatendra/AI-MOCK-INTERVIEWER/blob/main/README.md
-   cd AI-MockTest
+
+   git clone https://github.com/Upadhyay-Yatendra/MockView
+
+   cd MockView
+   
 ### Install dependencies:
 
 npm install
@@ -65,10 +68,38 @@ npm run dev
 
 Access the application at http://localhost:3000.
 
-🚀 Future Improvements
-    Integration of advanced AI models for better feedback.
-    Multi-language support for broader reach.
-    Enhanced visualization of test reports.
+## Testing credentials
+   Use these credentials for the testing purpose
+   
+Email : themastermafia955@gmail.com
+Password : Passtheword12345@
+
+## Screenshots
+
+## Screenshots  
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Upadhyay-Yatendra/MockView/main/public/screenshots/MockView1.png" width="500" />
+  <br/><br/>
+  <img src="https://raw.githubusercontent.com/Upadhyay-Yatendra/MockView/main/public/screenshots/MockView2.png" width="500" />
+  <br/><br/>
+  <img src="https://raw.githubusercontent.com/Upadhyay-Yatendra/MockView/main/public/screenshots/MockView3.png" width="500" />
+  <br/><br/>
+  <img src="https://raw.githubusercontent.com/Upadhyay-Yatendra/MockView/main/public/screenshots/MockView4.png" width="500" />
+  <br/><br/>
+  <img src="https://raw.githubusercontent.com/Upadhyay-Yatendra/MockView/main/public/screenshots/MockView5.png" width="500" />
+</p>
+
+
+###🚀 Future Improvements
+   
+   Integration of advanced AI models for better feedback.
+    
+   Multi-language support for broader reach.
+    
+   Enhanced visualization of test reports.
+
+    
 💻 Contributors
 Yatendra , Aryan 
 
