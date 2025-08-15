@@ -12,8 +12,9 @@ const InterviewList = () => {
 
   useEffect(() => {
     if (user) {
+      console.log("NODE_SERVER_URI:", process.env.NEXT_PUBLIC_NODE_SERVER_URI);
       axios
-        .get(process.env.NODE_SERVER_URI + "/interview/taken", {
+        .get(process.env.NEXT_PUBLIC_NODE_SERVER_URI + "/interview/taken", {
           params: {
             email: user?.primaryEmailAddress?.emailAddress,
             page: pageNumber, // pass page number as a query param
